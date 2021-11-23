@@ -3,9 +3,10 @@
 namespace App\config;
 
 use App\src\Controller\ManagerController;
-use App\src\Controller\PanelConnectionController\SignupController;
-use App\src\Controller\PanelConnectionController\LoginController;
-use App\src\Controller\PanelConnectionController\ProfileController;
+use App\src\Controller\AuthController\SignupController;
+use App\src\Controller\AuthController\LoginController;
+use App\src\Controller\AuthController\ProfileController;
+use App\src\Controller\AuthController\LogoutController;
 
 class Router {
     
@@ -13,6 +14,7 @@ class Router {
     private $signupController;
     private $loginController;
     private $profileController;
+    private $logoutController;
 
     public function __construct()
     {
@@ -20,19 +22,23 @@ class Router {
         $this->signupController = new SignupController();
         $this->loginController = new LoginController();
         $this->profileController = new ProfileController();
+        $this->logoutController = new LogoutController();
     }
 
     public function run(){
        
-        if (isset($_GET['route'])) {
-            if($_GET['route'] === "signup"){
-                $this->signupController->signupPage();
+        if (isset($_GET['auth'])) {
+            if($_GET['auth'] === "signup"){
+                $this->signupController->signupPage($_POST);
             }
-            if($_GET['route'] === "login"){
-                $this->loginController->loginPage();
+            if($_GET['auth'] === "login"){
+                $this->loginController->loginPage($_POST);
             }
-            if($_GET['route'] === "profile"){
-                $this->profileController->profilePage();
+            if($_GET['auth'] === "profile"){
+                $this->profileController->profilePage($_POST);
+            }
+            if($_GET['auth'] === "logout"){
+                $this->logoutController->logout();
             }
         }
         else {

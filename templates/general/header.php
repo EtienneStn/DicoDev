@@ -1,5 +1,6 @@
 <?php 
-session_start()
+session_start();
+var_dump($_SESSION)
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,27 +30,30 @@ session_start()
                     <input type="checkbox" id="switch" name="theme" class="theme-input"/><label for="switch" class="theme-label">Toggle</label>
             </li>
             <?php
-                if(!isset($_SESSION['id'])) {
+                if(isset($_SESSION)) {
             ?>
-                <li>
-                    <a class="btn-nav" href="?route=login">Se connecter</a>
-                </li>
-                <li>
-                    <a class="btn-nav" href="?route=signup">S'inscrire</a>
-                </li>
-            <?php 
-            }
-            else {
-            ?>
-                <li>
+                <!-- <li>
                     <img class="col-20" src="https://via.placeholder.com/100x100" alt="">
                 </li>
                 <li>
-                    <div class="col-70">SAÏD DELTA</div>
+                    <a class="btn-nav" href="?auth=profile"> <?= $_SESSION['userUsername'] ?></a>
                 </li>
-            <?php 
+                <li>
+                    <a class="btn-nav" href="../config/logout.php">Logout</a>
+                </li>  -->
+                <?php 
+            // }
+            // else {
+                ?> 
+                <li>
+                    <a class="btn-nav" href="?auth=login">Se connecter</a>
+                </li>
+                <li>
+                    <a class="btn-nav" href="?auth=signup">S'inscrire</a>
+                </li>
+            <!-- <?php 
             }
-            ?>
+            ?> -->
         </ul>
     </nav>
 </header>

@@ -37,8 +37,5 @@ class ManagerRepository
 
         return $result;
     }
-
-    protected function setUser() {
-        var_dump("Success");
-    }
+    
 }

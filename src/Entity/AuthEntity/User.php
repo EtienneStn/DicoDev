@@ -1,5 +1,5 @@
 <?php
-namespace App\src\Entity\EntityPanelConnection;
+namespace App\src\Entity\AuthEntity;
 
 class User {
     private $id;
@@ -15,7 +15,7 @@ class User {
         return $this->id;
     }
  
-    public function setId($id)
+    public function setId(int $id)
     {
         $this->id = $id;
 
@@ -27,7 +27,7 @@ class User {
         return $this->name;
     }
 
-    public function setName($name)
+    public function setName(string $name)
     {
         $this->name = $name;
 
@@ -39,7 +39,7 @@ class User {
         return $this->surname;
     }
 
-    public function setSurname($surname)
+    public function setSurname(string $surname)
     {
         $this->surname = $surname;
 
@@ -51,7 +51,7 @@ class User {
         return $this->username;
     }
 
-    public function setUsername($username)
+    public function setUsername(string $username)
     {
         $this->username = $username;
 
@@ -63,7 +63,7 @@ class User {
         return $this->email;
     }
 
-    public function setEmail($email)
+    public function setEmail(string $email)
     {
         $this->email = $email;
 
@@ -75,7 +75,7 @@ class User {
         return $this->password;
     }
 
-    public function setPassword($password)
+    public function setPassword(string $password)
     {
         $this->password = $password;
 
@@ -87,7 +87,7 @@ class User {
         return $this->passwordVerify;
     }
 
-    public function setPasswordVerify($passwordVerify)
+    public function setPasswordVerify(string $passwordVerify)
     {
         $this->passwordVerify = $passwordVerify;
 
