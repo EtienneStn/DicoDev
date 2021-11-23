@@ -9,31 +9,34 @@ use App\src\Controller\PanelConnectionController\ProfileController;
 
 class Router {
     
-    private $ManagerController;
+    private $managerController;
+    private $signupController;
+    private $loginController;
+    private $profileController;
 
     public function __construct()
     {
-        $this->ManagerController = new ManagerController();
-        $this->SignupController = new SignupController();
-        $this->LoginController = new LoginController();
-        $this->ProfileController = new ProfileController();
+        $this->managerController = new ManagerController();
+        $this->signupController = new SignupController();
+        $this->loginController = new LoginController();
+        $this->profileController = new ProfileController();
     }
 
     public function run(){
        
         if (isset($_GET['route'])) {
             if($_GET['route'] === "signup"){
-                $this->SignupController->signupPage();
+                $this->signupController->signupPage();
             }
             if($_GET['route'] === "login"){
-                $this->LoginController->loginPage();
+                $this->loginController->loginPage();
             }
             if($_GET['route'] === "profile"){
-                $this->ProfileController->profilePage();
+                $this->profileController->profilePage();
             }
         }
         else {
-            $this->ManagerController->home();
+            $this->managerController->home();
         }
     }
 }

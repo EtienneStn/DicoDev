@@ -1,0 +1,11 @@
+CREATE DATABASE dicodev;
+USE dicodev;
+CREATE TABLE users ( 
+    userId INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    userName VARCHAR(25) NOT NULL,
+    userSurname VARCHAR(25) NOT NULL,
+    userUsername VARCHAR(25) NOT NULL,
+    userEmail VARCHAR(255) NOT NULL UNIQUE,
+    userPassword VARCHAR(255) NOT NULL,
+    userRole INT NOT NULL DEFAULT 1
+);

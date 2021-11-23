@@ -4,7 +4,6 @@
             <h2>Sign Up</h2>
         </div>
         <form action="" method="POST" class="signup-form">
-            <label for="test-signup">Test</label>
             <input type="text" name="name" placeholder="Name" id="">
             <input type="text" name="surname" placeholder="Surname" id="">
             <input type="text" name="username" placeholder="Username" id="">

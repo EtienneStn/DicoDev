@@ -1,6 +1,6 @@
 <?php
 const DB_HOST = "localhost";
-const DB_NAME = "dev_doc";
+const DB_NAME = "devdoc";
 const DB_USER = "root";
 const DB_PASSWORD = "";
 
