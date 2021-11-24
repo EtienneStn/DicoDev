@@ -19,7 +19,7 @@ class SignupRepository extends ManagerRepository{
         $userId = $this ->connection->lastInsertId();
         $user->setId($userId);
 
-        header('Location: ../?route=login');
+        header('Location: ./?auth=login');
         echo "Success";
     }
 }

@@ -22,10 +22,10 @@ const sidebarClose = document.querySelector('.sidebar-close')
 sidebarClose.addEventListener('click', () => {
   console.log("click", sidebarClose)
   const divSidebar = document.querySelector(".general-sidebar")
-  const divPage = document.querySelector('.general-content')
+  const divPage = document.querySelector('.main-content')
   const footerPage = document.querySelector('.footer-content')
   divSidebar.classList.toggle("sidebar-action")
-  divPage.classList.toggle("general-content-action")
+  divPage.classList.toggle("main-content-action")
   footerPage.classList.toggle("footer-content-action")
 })
 // DROPDOWN MENU

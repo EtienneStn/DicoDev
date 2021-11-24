@@ -35,7 +35,10 @@ class Router {
                 $this->loginController->loginPage($_POST);
             }
             if($_GET['auth'] === "profile"){
-                $this->profileController->profilePage($_POST);
+                $this->managerController->profilePage();
+            }
+            if($_GET['auth'] === "profile/update"){
+                $this->profileController->profileUpdate($_POST);
             }
             if($_GET['auth'] === "logout"){
                 $this->logoutController->logout();

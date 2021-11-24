@@ -37,5 +37,4 @@ class ManagerRepository
 
         return $result;
     }
-    
 }

@@ -1,6 +1,5 @@
 <?php 
 session_start();
-var_dump($_SESSION)
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,8 +20,12 @@ var_dump($_SESSION)
                 <a href=""><img src="../library/img/Logo.jpg" alt=""></a>
             </li>
             <div class="info-header row">
-                <li><a href="">à propos</a></li>
-                <li><a href="">contact</a></li>
+                <li>
+                    <a href="">à propos</a>
+                </li>
+                <li>
+                    <a href="">contact</a>
+                </li>
             </div>
         </ul>
         <ul class="nav2 row col-50">
@@ -30,20 +33,20 @@ var_dump($_SESSION)
                     <input type="checkbox" id="switch" name="theme" class="theme-input"/><label for="switch" class="theme-label">Toggle</label>
             </li>
             <?php
-                if(isset($_SESSION)) {
+            if(isset($_SESSION['userId'])) {
             ?>
-                <!-- <li>
-                    <img class="col-20" src="https://via.placeholder.com/100x100" alt="">
+                <li>
+                    <img class="" src="https://via.placeholder.com/30x30" alt="">
                 </li>
                 <li>
-                    <a class="btn-nav" href="?auth=profile"> <?= $_SESSION['userUsername'] ?></a>
+                    <a class="" href="?auth=profile"><?= htmlspecialchars($_SESSION['userUsername']); ?></a>
                 </li>
                 <li>
-                    <a class="btn-nav" href="../config/logout.php">Logout</a>
-                </li>  -->
-                <?php 
-            // }
-            // else {
+                    <a class="btn-nav" href="?auth=logout">Logout</a>
+                </li>
+            <?php 
+            }
+            else {
                 ?> 
                 <li>
                     <a class="btn-nav" href="?auth=login">Se connecter</a>
@@ -51,9 +54,9 @@ var_dump($_SESSION)
                 <li>
                     <a class="btn-nav" href="?auth=signup">S'inscrire</a>
                 </li>
-            <!-- <?php 
+            <?php 
             }
-            ?> -->
+            ?>
         </ul>
     </nav>
 </header>
@@ -91,4 +94,4 @@ var_dump($_SESSION)
             <button class="btn-sidebar"></button>
         </div>
     </div>
-    <div class="general-content">
+    <div class="main-content">

@@ -16,7 +16,7 @@ class LoginController extends ManagerController{
     
     public function loginPage($post)
     {
-        if(isset($_POST['login']))
+        if(isset($post['login']))
         {
             $user = new User();
             $user
@@ -24,20 +24,28 @@ class LoginController extends ManagerController{
                 ->setEmail($post['username'])
                 ->setPassword($post['password']);
 
-            /* if($this->emptyInput($post) === false)
+            if($this->emptyInputLogin($post) === false)
             {
                 echo "<div class='error'>Erreur, des champs sont vides.</div>";
-            } */
-            /* elseif($this->invalidEmailOrUsername($post) === false)
+            }
+            else 
             {
-                echo "<div class='error'>Erreur, mail non valide.</div>";
-            } */
-            /* else 
-            { */
-                $this->loginRepository->loginUser($user, $post);
-            /* } */
+                $this->loginRepository->loginUser($user);
+            }
         }
         
         require '../templates/auth/login.php';
+    }
+
+    protected function emptyInputLogin($post)
+    {
+        if(empty($post['username'])|| empty($post['password']))
+        {
+            $result = false;
+        }
+        else {
+            $result = true;
+        }
+        return $result;
     }
 }

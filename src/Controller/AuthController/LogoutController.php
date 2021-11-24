@@ -13,9 +13,6 @@ class LogoutController extends LogoutRepository{
     
     public function logout()
     {
-        if(isset($_POST['update']))
-        {
-            $this->logoutRepository->logoutUser();
-        }
+        $this->logoutRepository->logoutUser();
     }
 }

@@ -1,6 +1,6 @@
     </div>
 </main>
-<footer class="bg-footer footer-content">
+<footer class="bg-footer footer-content row">
     <div class="general-footer">
         <div class="dev-infos">
             <h5>Developers</h5>

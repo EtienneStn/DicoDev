@@ -1,1 +1,1 @@
-<div>TEST</div>
+<div>HOMEPAGE</div>

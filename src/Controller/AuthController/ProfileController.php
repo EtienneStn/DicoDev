@@ -1,5 +1,7 @@
 <?php
 namespace App\src\Controller\AuthController;
+
+use App\src\Entity\AuthEntity\User;
 use App\src\Repository\AuthRepository\ProfileRepository;
 
 class ProfileController extends ProfileRepository{
@@ -10,13 +12,39 @@ class ProfileController extends ProfileRepository{
     {
         $this->profileRepository = new ProfileRepository();
     }
-    
-    public function profilePage()
+    public function profileUpdate($post)
     {
-        require '../templates/auth/profile.php';
-        if(isset($_POST['update']))
+        if(isset($post['update']))
         {
-            $this->profileRepository->updateUser($_POST);
+            $user = new User();
+            $user
+                ->setId($_SESSION['userId'])
+                ->setName($post['name'])
+                ->setSurname($post['surname'])
+                ->setUsername($post['username'])
+                ->setEmail($post['email'])
+                ->setPassword($post['password']);
+
+            if($this->emptyInputProfile($post) === false)
+            {
+                echo "<div class='error'>Erreur, des champs sont vides.</div>";
+            }
+            else 
+            {
+            $this->profileRepository->updateUser($user);
+            }
         }
+        require '../templates/auth/profile_form.php';
+    }
+    protected function emptyInputProfile($post)
+    {
+        if(empty($post['name']) || empty($post['surname']) || empty($post['username']) || empty($post['email']) || empty($post['password']))
+        {
+            $result = false;
+        }
+        else {
+            $result = true;
+        }
+        return $result;
     }
 }
