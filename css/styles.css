@@ -3,9 +3,9 @@ html {
     --bg0:#3c445c;
     --bg1:#484848;
     --bg2:#2b2b2b;
-    --c3:#222222;
-    --c4:#180c46;
-    --c5:#3f3232;
+    --bg3:#fff;
+    --bg4:#180c46;
+    --bg5:#3f3232;
     --cp1:#fff;
     --b1:#fff;
     --b1-border:#2b2b2b;
@@ -20,12 +20,12 @@ html {
     
 }
 html[data-theme=dark] {
-    --bg0:#131313;
-    --bg1:#06a4ff;
-    --bg2:#000000;
-    --c3:#fb0060;
-    --c4:#fff;
-    --c5:#373b3d;
+    --bg0:#2b2b2b;
+    --bg1:#484848;
+    --bg2:#2b2b2b;
+    --bg3:#484848;
+    --bg4:#373b3d;
+    --bg5:#2b2b2b;
     --cp1:#fff;
     --b1:#fff;
     --b1-border:#373b3d;
@@ -157,11 +157,14 @@ a{
     width: 5%;
 }
 /* HEADER */
-.bg0 {
-    background-color: var(--bg0);
-}
 .header {
+    background-color: var(--bg0);
     height: 8vh;
+    position: fixed;
+    top: 0;
+}
+.hide{
+    top: -8vh;
 }
 .h1 {
     align-items: center;
@@ -268,6 +271,12 @@ a{
   background: #555;
 }
 /* SIDEBAR */
+.bg1{
+    margin-top: 8vh;
+}
+.bg-no-margin{
+    margin-top: 0;
+}
 .sidebar {
     position: fixed;
     width: 15%;
@@ -314,6 +323,9 @@ a{
     overflow-x: hidden;
     overflow-y: scroll;
     width: 100%;
+}
+.items-sidebar a{
+    cursor: pointer;
 }
 .container-items-sidebar{
     flex-direction: column;
@@ -362,7 +374,7 @@ a{
     justify-content: space-between;
 }
 .sidebar-close {
-    background-color: var(--c3);
+    background-color: var(--bg4);
     flex-direction: column;
     width: 7%;
     list-style: none;
@@ -370,7 +382,7 @@ a{
     z-index: 3000;
 }
 .sidebar-close:hover {
-    background-color: var(--c5);
+    background-color: var(--bg5);
     flex-direction: column;
     width: 7%;
     list-style: none;
@@ -391,6 +403,7 @@ a{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: var(--bg3);
 }
 .main-content-action{
     width: 100%;
@@ -416,6 +429,7 @@ a{
     margin-left: 15%;
     align-items: center;
     justify-content: center;
+
 }
 .footer-content-action{
     width: 100%;
@@ -426,10 +440,17 @@ a{
     color: var(--cp1);
 }
 .general-footer{
-    display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
     height: 8vh;
+    width: 70%;
 }
+.dev-ul a{
+    padding: 0rem 1rem;
+}
+.legalNotice a{
+    padding: 0rem 1rem;
+}
+

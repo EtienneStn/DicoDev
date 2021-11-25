@@ -36,8 +36,58 @@ dropdownArray.forEach(function(el){
     menu = el.querySelector('.dropdown-menu'),
     arrow = button.querySelector('i.fas');
     button.onclick = function(event) {
-      event.preventDefault();
-      menu.classList.toggle('dropdown-menu-hidden');
-      arrow.classList.toggle('arrow-open');
+        event.preventDefault();
+        menu.classList.toggle('dropdown-menu-hidden');
+        arrow.classList.toggle('arrow-open');
     };
 });
+// SCROLL
+(function(){
+
+    let doc = document.querySelector('.main-content');
+    let w = window;
+  
+    let prevScroll = w.scrollY || doc.scrollTop;
+    let curScroll;
+    let direction = 0;
+    let prevDirection = 0;
+  
+    let header = document.querySelector('.header');
+    let sidebar = document.querySelector('.bg1');
+  
+    let checkScroll = function() {
+
+      curScroll = w.scrollY || doc.scrollTop;
+      if (curScroll > prevScroll) { 
+        //scrolled up
+        direction = 2;
+      }
+      else if (curScroll < prevScroll) { 
+        //scrolled down
+        direction = 1;
+      }
+  
+      if (direction !== prevDirection) {
+        toggleHeader(direction, curScroll);
+      }
+  
+      prevScroll = curScroll;
+    };
+  
+    let toggleHeader = function(direction, curScroll) {
+      if (direction === 2 && curScroll > 58) { 
+
+        header.classList.add('hide');
+        sidebar.classList.add('bg-no-margin');
+        prevDirection = direction;
+      }
+      else if (direction === 1) {
+        header.classList.remove('hide');
+        sidebar.classList.remove('bg-no-margin');
+        prevDirection = direction;
+      }
+    };
+  
+    window.addEventListener('scroll', checkScroll);
+  
+  })();

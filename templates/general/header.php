@@ -14,7 +14,7 @@ session_start();
 </head>
 <body>
 <header class="bg0">
-    <nav class="header row container-fluid">
+    <nav class="header row container-fluid col-100">
         <ul class="nav col-50 row">
             <li class="h1 row">
                 <a href=""><img src="../library/img/Logo.jpg" alt=""></a>
@@ -60,38 +60,3 @@ session_start();
         </ul>
     </nav>
 </header>
-<main class="bg1">
-    <div class="sidebar row">
-        <div class="general-sidebar">
-            <div class="container-sidebar">
-                <form class="shearch-bar" action="POST">
-                    <input type="text" name="shearch-bar" placeholder="Rechercher">
-                </form>
-                <div class="items-sidebar">
-                        <nav class="row container-items-sidebar">
-                            <li class="dropdown margin-top-dropdown"><a data-toggle="dropdown" href="#"><i class="fas fa-caret-right"></i>
-                                </i>TEST</a>
-                                <ul class="dropdown-menu dropdown-menu-hidden">
-                                <li class="dropdown"><a data-toggle="dropdown" href="#"><i class="fas fa-caret-right"></i>Lorem.</a>
-                                        <ul class="dropdown-menu dropdown-menu-hidden">
-                                            <li>Lorem, ipsum.</li>
-                                            <li>Lorem, ipsum.</li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown"><a data-toggle="dropdown" href="#"><i class="fas fa-caret-right"></i>Lorem.</a>
-                                        <ul class="dropdown-menu dropdown-menu-hidden">
-                                            <li>Lorem, ipsum.</li>
-                                            <li>Lorem, ipsum.</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </nav>
-                </div>
-            </div>
-        </div>
-        <div class="sidebar-close">
-            <button class="btn-sidebar"></button>
-        </div>
-    </div>
-    <div class="main-content">
