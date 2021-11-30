@@ -3,9 +3,23 @@ namespace App\src\Controller;
 use App\src\Repository\ManagerRepository;
 
 class ManagerController extends ManagerRepository{
+    public function loadHeader()
+    {
+        require '../templates/general/header.php';
+    }
+    public function loadSidebar()
+    {
+        require '../templates/general/sidebar.php';
+    }
+
     public function home() 
     {
         require_once '../templates/homepage/homepage.php';
+    }
+
+    public function loadFooter()
+    {
+        require '../templates/general/footer.php';
     }
     
     public function profilePage()

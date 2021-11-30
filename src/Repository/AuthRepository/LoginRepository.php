@@ -1,6 +1,7 @@
 <?php
 namespace App\src\Repository\AuthRepository;
 
+use App\src\Entity\AuthEntity\User;
 use App\src\Repository\ManagerRepository;
 use PDO;
 
@@ -28,6 +29,8 @@ class loginRepository extends ManagerRepository{
             }
             elseif($checkPwd == true) 
             {
+                $user->setPassword($paswordHashed[0]["userPassword"]);
+
                 $sql = 'SELECT * FROM users WHERE userUsername = ? OR userEmail = ? AND userPassword = ?;';
                 $result = $this->createQuery($sql, [
                     $user->getUsername(),

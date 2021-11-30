@@ -10,12 +10,12 @@ use App\src\Controller\AuthController\LogoutController;
 
 class Router {
     
+    private $sidebarController;
     private $managerController;
     private $signupController;
     private $loginController;
     private $profileController;
-    private $logoutController;
-
+    
     public function __construct()
     {
         $this->managerController = new ManagerController();
@@ -26,7 +26,10 @@ class Router {
     }
 
     public function run(){
-       
+        
+        $this->managerController->loadHeader();
+        $this->managerController->loadSidebar();
+
         if (isset($_GET['auth'])) {
             if($_GET['auth'] === "signup"){
                 $this->signupController->signupPage($_POST);
@@ -47,5 +50,7 @@ class Router {
         else {
             $this->managerController->home();
         }
+
+        $this->managerController->loadFooter();
     }
 }

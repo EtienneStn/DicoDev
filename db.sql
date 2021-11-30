@@ -9,3 +9,20 @@ CREATE TABLE users (
     userPassword VARCHAR(255) NOT NULL,
     userRole INT NOT NULL DEFAULT 1
 );
+CREATE TABLE langages ( 
+    langageId INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    langageName VARCHAR(25) NOT NULL,
+    langageDesc VARCHAR(255) NOT NULL
+);
+CREATE TABLE categories ( 
+    categorieId INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    categorieName VARCHAR(50) NOT NULL,
+    langageId INT NOT NULL UNIQUE,
+    FOREIGN KEY (langageId) REFERENCES langages(langageId)
+);
+CREATE TABLE attributes ( 
+    attributeId INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    attributeName VARCHAR(50) NOT NULL,
+    categorieId INT NOT NULL UNIQUE,
+    FOREIGN KEY (categorieId) REFERENCES categories(categorieId)
+);
