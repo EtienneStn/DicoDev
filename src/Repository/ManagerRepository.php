@@ -37,4 +37,9 @@ class ManagerRepository
 
         return $result;
     }
+    
+    public function fetchArray($result)
+    {
+        return $result->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

@@ -31,6 +31,8 @@ class LoginController extends ManagerController{
             else 
             {
                 $this->loginRepository->loginUser($user);
+
+                header('Location: ./?route=homepage');
             }
         }
         

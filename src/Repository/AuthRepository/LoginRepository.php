@@ -1,9 +1,6 @@
 <?php
 namespace App\src\Repository\AuthRepository;
-
-use App\src\Entity\AuthEntity\User;
 use App\src\Repository\ManagerRepository;
-use PDO;
 
 class loginRepository extends ManagerRepository{
     public function loginUser(object $user)
@@ -20,14 +17,14 @@ class loginRepository extends ManagerRepository{
         }
         else
         {
-            $paswordHashed = $result->fetchAll(PDO::FETCH_ASSOC);
+            $paswordHashed = $this->fetchArray($result);
             $checkPwd = password_verify($user->getPassword(), $paswordHashed[0]["userPassword"]);
             if($checkPwd == false) 
             {
                 $result = null;
                 echo "<div class='error'>Erreur, mot de passe invalide.</div>";
             }
-            elseif($checkPwd == true) 
+            else 
             {
                 $user->setPassword($paswordHashed[0]["userPassword"]);
 
@@ -44,7 +41,7 @@ class loginRepository extends ManagerRepository{
                 }
                 else
                 {
-                    $user = $result->fetchAll(PDO::FETCH_ASSOC);
+                    $user = $this->fetchArray($result);
 
                     session_start();
                     $_SESSION["userId"] = $user[0]["userId"];
@@ -54,13 +51,7 @@ class loginRepository extends ManagerRepository{
                     $_SESSION["userEmail"] = $user[0]["userEmail"];
 
                     $result = null;
-                    header('Location: ./?route=homepage');
                 }
-            }
-            else{
-                $result = null;
-                header('Location: ./?auth=login');
-                exit();
             }
         }
     }

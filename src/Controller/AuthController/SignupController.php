@@ -18,7 +18,7 @@ class SignupController extends ManagerController{
     {
         if(isset($post['signup']))
         {   
-            $hashPassword = $this->hashing($post['password']);
+            $hashPassword = $this->signupRepository->hashing($post['password']);
             $user = new User();
             $user
                 ->setName($post['name'])
@@ -28,60 +28,32 @@ class SignupController extends ManagerController{
                 ->setPassword($hashPassword)
                 ->setPasswordVerify($post['passwordVerify']);
 
-            if($this->emptyInputSignup($post) === false)
+            if($this->signupRepository->emptyInputSignup($post) === false)
             {
-                echo "<div class='error'>Erreur, des champs sont vides.</div>";
+                header('Location: ./?auth=signup?error=emptyInput');
+                exit();
             }
-            elseif($this->invalidUsername($post) === false)
+            elseif($this->signupRepository->invalidUsername($post) === false)
             {
-                echo "<div class='error'>Erreur, le nom d'utilisateur n'est pas valide.</div>";
+                header('Location: ./?auth=signup?error=invalidUsername');
+                exit();
             }
-            elseif($this->invalidEmail($post) === false)
+            elseif($this->signupRepository->invalidEmail($post) === false)
             {
-                echo "<div class='error'>Erreur, mail non valide.</div>";
+                header('Location: ./?auth=signup?error=invalidEmail');
+                exit();
             }
-            elseif($this->passwordMatch($post) === false)
+            elseif($this->signupRepository->passwordMatch($post) === false)
             {
-                echo "<div class='error'>Erreur, les mots de passe sont différents.</div>";
+                header('Location: ./?auth=signup?error=passwordMatch');
+                exit();
             }
             else {
                 $this->signupRepository->signupUser($user);
+                header('Location: ./?auth=login');
+                exit();
             }
         }
         require '../templates/auth/signup.php';
-    }
-
-    protected function emptyInputSignup($post)
-    {
-        if(empty($post['name']) || empty($post['surname']) || empty($post['username']) || empty($post['email']) || empty($post['password']) || empty($post['passwordVerify']))
-        {
-            $result = false;
-        }
-        else {
-            $result = true;
-        }
-        return $result;
-    }
-
-    protected function invalidUsername($post) 
-    {
-        if(!preg_match("/^[a-zA-Z0-9]*$/", $post['username'])) {
-            $result = false;
-        }
-        else {
-            $result = true;
-        }
-        return $result;  
-    }
-
-    protected function invalidEmail($post) 
-    {
-        if(!filter_var($post['email'], FILTER_VALIDATE_EMAIL)) {
-            $result = false;
-        }
-        else {
-            $result = true;
-        }
-        return $result;  
     }
 }

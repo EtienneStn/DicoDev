@@ -42,14 +42,21 @@ class ProfileRepository extends ManagerRepository
                 $_SESSION["userSurname"] = $user->getSurname();
                 $_SESSION["userUsername"] = $user->getUsername();
                 $_SESSION["userEmail"] = $user->getEmail();
+                
                 $result = null;
-                header('Location: ./?auth=profile');
             }
         }
-        else
+    }
+    
+    protected function emptyInputProfile($post)
+    {
+        if(empty($post['name']) || empty($post['surname']) || empty($post['username']) || empty($post['email']) || empty($post['password']))
         {
-            $result = null;
-            echo "<div class='error'>Vous ne disposez pas des droits.</div>";
+            $result = false;
         }
+        else {
+            $result = true;
+        }
+        return $result;
     }
 }

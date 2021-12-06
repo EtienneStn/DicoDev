@@ -15,11 +15,54 @@ class SignupRepository extends ManagerRepository{
             $user->getEmail(),
             $user->getPassword()
         ]);
-        
-        $userId = $this ->connection->lastInsertId();
-        $user->setId($userId);
+    }
+    public function emptyInputSignup($post)
+    {
+        if(empty($post['name']) || empty($post['surname']) || empty($post['username']) || empty($post['email']) || empty($post['password']) || empty($post['passwordVerify']))
+        {
+            $result = false;
+        }
+        else {
+            $result = true;
+        }
+        return $result;
+    }
 
-        header('Location: ./?auth=login');
-        echo "Success";
+    public function invalidUsername($post) 
+    {
+        if(!preg_match("/^[a-zA-Z0-9]*$/", $post['username'])) {
+            $result = false;
+        }
+        else {
+            $result = true;
+        }
+        return $result;  
+    }
+
+    public function invalidEmail($post) 
+    {
+        if(!filter_var($post['email'], FILTER_VALIDATE_EMAIL)) {
+            $result = false;
+        }
+        else {
+            $result = true;
+        }
+        return $result;  
+    }
+
+    public function hashing($post) 
+    {
+        return $hash = password_hash($post, PASSWORD_DEFAULT);
+    }
+    
+    public function passwordMatch($post) 
+    {
+        if($post['password'] !== $post['passwordVerify']) {
+            $result = false;
+        }
+        else {
+            $result = true;
+        }
+        return $result;  
     }
 }

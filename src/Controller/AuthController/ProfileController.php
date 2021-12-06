@@ -32,19 +32,11 @@ class ProfileController extends ProfileRepository{
             else 
             {
             $this->profileRepository->updateUser($user);
+
+            header('Location: ./?auth=profile');
+            exit();
             }
         }
         require '../templates/auth/profile_form.php';
-    }
-    protected function emptyInputProfile($post)
-    {
-        if(empty($post['name']) || empty($post['surname']) || empty($post['username']) || empty($post['email']) || empty($post['password']))
-        {
-            $result = false;
-        }
-        else {
-            $result = true;
-        }
-        return $result;
     }
 }
