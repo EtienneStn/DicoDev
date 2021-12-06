@@ -30,22 +30,22 @@ class SignupController extends ManagerController{
 
             if($this->signupRepository->emptyInputSignup($post) === false)
             {
-                header('Location: ./?auth=signup?error=emptyInput');
+                header('Location: ./?auth=signup&error=EmptyInput');
                 exit();
             }
             elseif($this->signupRepository->invalidUsername($post) === false)
             {
-                header('Location: ./?auth=signup?error=invalidUsername');
+                header('Location: ./?auth=signup&error=InvalidUsername');
                 exit();
             }
             elseif($this->signupRepository->invalidEmail($post) === false)
             {
-                header('Location: ./?auth=signup?error=invalidEmail');
+                header('Location: ./?auth=signup&error=InvalidEmail');
                 exit();
             }
             elseif($this->signupRepository->passwordMatch($post) === false)
             {
-                header('Location: ./?auth=signup?error=passwordMatch');
+                header('Location: ./?auth=signup&error=PasswordMatch');
                 exit();
             }
             else {

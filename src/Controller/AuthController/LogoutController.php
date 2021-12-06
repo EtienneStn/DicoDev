@@ -15,7 +15,7 @@ class LogoutController extends LogoutRepository{
     {
         $this->logoutRepository->logoutUser();
 
-        header("location: ./?auth=logout?success=logout");
+        header("Location: ?auth=successLogout");
         exit();
     }
 }

@@ -42,8 +42,7 @@ class loginRepository extends ManagerRepository{
                 else
                 {
                     $user = $this->fetchArray($result);
-
-                    session_start();
+                        // session_start();
                     $_SESSION["userId"] = $user[0]["userId"];
                     $_SESSION["userName"] = $user[0]["userName"];
                     $_SESSION["userSurname"] = $user[0]["userSurname"];

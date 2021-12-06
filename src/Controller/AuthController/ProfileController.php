@@ -27,7 +27,8 @@ class ProfileController extends ProfileRepository{
 
             if($this->emptyInputProfile($post) === false)
             {
-                echo "<div class='error'>Erreur, des champs sont vides.</div>";
+                header('Location: ./?auth=profile&error=EmptyInput');
+                exit();
             }
             else 
             {

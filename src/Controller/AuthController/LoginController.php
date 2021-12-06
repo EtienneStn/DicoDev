@@ -26,13 +26,14 @@ class LoginController extends ManagerController{
 
             if($this->emptyInputLogin($post) === false)
             {
-                echo "<div class='error'>Erreur, des champs sont vides.</div>";
+                header('Location: index.php?auth=profile&error=EmptyInput');
+                exit();
             }
             else 
             {
                 $this->loginRepository->loginUser($user);
 
-                header('Location: ./?route=homepage');
+                header('Location: index.php?route=homepage');
             }
         }
         

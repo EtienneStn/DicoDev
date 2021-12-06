@@ -2,6 +2,7 @@
 if(!empty($_SESSION['userId']))
 {
 ?>
+<div class="main-content">
     <form method="POST" class="auth-form">
         <input type="text" name="name" placeholder="Name" value="<?= htmlspecialchars($_SESSION['userName']); ?>">
         <input type="text" name="surname" placeholder="Surname" value="<?= htmlspecialchars($_SESSION['userSurname']); ?>">

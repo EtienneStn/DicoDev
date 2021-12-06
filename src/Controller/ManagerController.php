@@ -7,10 +7,6 @@ class ManagerController extends ManagerRepository{
     {
         require_once '../templates/general/header.php';
     }
-    public function loadSidebar()
-    {
-        require_once '../templates/general/sidebar.php';
-    }
 
     public function home() 
     {

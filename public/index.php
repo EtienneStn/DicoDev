@@ -8,4 +8,3 @@ Autoloader::register();
 use App\config\Router;
 $router = new Router();
 $router->run();
-

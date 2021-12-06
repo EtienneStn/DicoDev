@@ -1,3 +1,4 @@
+<div class="main-content">
 <section class="bg-2">
     <div class="container">
         <?php
