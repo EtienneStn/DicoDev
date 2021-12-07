@@ -28,14 +28,14 @@ class ProfileController extends ProfileRepository{
             if($this->emptyInputProfile($post) === false)
             {
                 header('Location: ./?auth=profile&error=EmptyInput');
-                exit();
+                die();
             }
             else 
             {
             $this->profileRepository->updateUser($user);
 
             header('Location: ./?auth=profile');
-            exit();
+            die();
             }
         }
         require_once '../templates/auth/profile_form.php';

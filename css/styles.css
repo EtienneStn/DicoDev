@@ -163,7 +163,7 @@ a{
     position: fixed;
     top: 0;
 }
-.hide{
+.hide-header{
     top: -8vh;
 }
 .h1 {
@@ -271,15 +271,6 @@ a{
   background: #555;
 }
 /* SIDEBAR */
-.bg1{
-    margin-top: 8vh;
-}
-.bg-no-margin #slide{
-    margin-top: 0;
-    height: 100%;
-    transition: 0.4s;
-    top: 0
-}
 #slide {
     position: absolute;
     left: -100px;
@@ -296,14 +287,19 @@ a{
     width: 15%;
     height: 95vh;
 }
+.sidebar-no-margin{
+    margin-top: 0;
+    height: 100vh;
+}
 .sidebar-action {
     background-color: var(--bg2) !important;
     display: none;
 }
+.header,
 .sidebar,
 .sidebar-action,
-.general-page,
-.general-page-action {
+.main-content,
+.main-content-action {
     transition: all 750ms !important;
     transition-delay: 0 !important;
 }
@@ -398,6 +394,9 @@ a{
     border: none;
 }
 /* CONTENT PAGE */
+.doc-page{
+    margin-top: 8vh;
+}
 .main-content{
     width: 85%;
     margin-left: 15%;
@@ -414,7 +413,7 @@ a{
     width: 100%;
     margin-left: 0%;
 }
-.content-section{
+.auth-section{
     display: flex;
     flex-flow: column nowrap;
     align-items: center;

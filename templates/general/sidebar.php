@@ -1,7 +1,7 @@
 <?php
 ob_start();
 ?>
-<main class="bg1">
+<div class="doc-up">
     <div class="sidebar row">
         <div class="general-sidebar">
             <div class="container-sidebar">
@@ -16,34 +16,9 @@ ob_start();
                             </a>
                             <li class="dropdown-menu dropdown-menu-hidden">
                                 <ul class="dropdown">
-                                <a data-toggle="dropdown">
-                                    <i class="fas fa-caret-right"></i>Lorem.
-                                </a>
-                                    <li class="dropdown-menu dropdown-menu-hidden">
-                                        <ul>Test</ul>
-                                        <ul>Test</ul>
-                                    </li>
-                                </ul>
-                                <ul class="dropdown">
                                     <a data-toggle="dropdown">
                                         <i class="fas fa-caret-right"></i>Lorem.
                                     </a>
-                                    <li class="dropdown-menu dropdown-menu-hidden">
-                                        <ul>Test</ul>
-                                        <ul>Test</ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul class="dropdown margin-top-dropdown">
-                            <a data-toggle="dropdown">
-                                <i class="fas fa-caret-right"></i>TEST
-                            </a>
-                            <li class="dropdown-menu dropdown-menu-hidden">
-                                <ul class="dropdown">
-                                <a data-toggle="dropdown">
-                                    <i class="fas fa-caret-right"></i>Lorem.
-                                </a>
                                     <li class="dropdown-menu dropdown-menu-hidden">
                                         <ul>Test</ul>
                                         <ul>Test</ul>
@@ -68,6 +43,7 @@ ob_start();
             <button class="btn-sidebar"></button>
         </div>
     </div>
+    <main class="bg1">
 <?php 
     $output_sidebar = ob_get_clean();
 ?> 

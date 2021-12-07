@@ -1,5 +1,6 @@
-    </div>
-</main>
+        </div>
+    </main>
+</div>
 <footer class="bg-footer footer-content row">
     <div class="general-footer row">
             <ul class="dev-ul row">

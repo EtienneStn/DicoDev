@@ -53,7 +53,7 @@ dropdownArray.forEach(function(el){
     let prevDirection = 0;
   
     let header = document.querySelector('.header');
-    let sidebar = document.querySelector('.bg1');
+    let page = document.querySelector('.doc-page');
   
     let checkScroll = function() {
 
@@ -77,13 +77,13 @@ dropdownArray.forEach(function(el){
     let toggleHeader = function(direction, curScroll) {
       if (direction === 2 && curScroll > 58) { 
 
-        header.classList.add('hide');
-        sidebar.classList.add('bg-no-margin #slide');
+        header.classList.add('hide-header');
+        sidebar.classList.add('sidebar-no-margin');
         prevDirection = direction;
       }
       else if (direction === 1) {
-        header.classList.remove('hide');
-        sidebar.classList.remove('bg-no-margin #slide');
+        header.classList.remove('hide-header');
+        sidebar.classList.remove('sidebar-no-margin');
         prevDirection = direction;
       }
     };

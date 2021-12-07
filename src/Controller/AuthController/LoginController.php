@@ -27,7 +27,7 @@ class LoginController extends ManagerController{
             if($this->emptyInputLogin($post) === false)
             {
                 header('Location: index.php?auth=login&error=EmptyInput');
-                exit();
+                die();
             }
             else 
             {
@@ -35,6 +35,7 @@ class LoginController extends ManagerController{
                 if(isset($_SESSION['userId']))
                 {
                     header('Location: index.php?route=homepage');
+                    die();
                 }
             }
         }

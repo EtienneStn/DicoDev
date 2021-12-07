@@ -59,7 +59,6 @@ class Router
                 }
 
                 $this->signupController->signupPage($_POST);
-                die();
             }
             if($_GET['auth'] === "login")
             {
