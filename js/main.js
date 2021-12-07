@@ -78,12 +78,12 @@ dropdownArray.forEach(function(el){
       if (direction === 2 && curScroll > 58) { 
 
         header.classList.add('hide');
-        sidebar.classList.add('bg-no-margin');
+        sidebar.classList.add('bg-no-margin #slide');
         prevDirection = direction;
       }
       else if (direction === 1) {
         header.classList.remove('hide');
-        sidebar.classList.remove('bg-no-margin');
+        sidebar.classList.remove('bg-no-margin #slide');
         prevDirection = direction;
       }
     };

@@ -57,7 +57,9 @@ class Router
                         echo "<div class='error'>Erreur, les mots de passe sont différents.</div>";
                     }
                 }
+
                 $this->signupController->signupPage($_POST);
+                die();
             }
             if($_GET['auth'] === "login")
             {
@@ -75,11 +77,12 @@ class Router
             {
                 $this->logoutController->logout();
             }
-        }
-            /* if($_GET['auth'] === "successLogout")
+            if($_GET['auth'] === "successLogout")
             {
+                $this->managerController->home();
                 echo "<div class='success'>Success Logout</div>";
-            } */
+            }
+        }
         else 
         {
             $this->managerController->home();

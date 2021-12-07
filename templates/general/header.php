@@ -17,14 +17,14 @@
     <nav class="header row container-fluid col-100">
         <ul class="nav col-50 row">
             <li class="h1 row">
-                <a href=""><img src="../library/img/Logo.jpg" alt=""></a>
+                <a href="?home"><img src="../library/img/Logo.jpg" alt=""></a>
             </li>
             <div class="info-header row">
                 <li>
-                    <a href="">à propos</a>
+                    <a href="?home">à propos</a>
                 </li>
                 <li>
-                    <a href="">contact</a>
+                    <a href="?home">contact</a>
                 </li>
             </div>
         </ul>
@@ -36,7 +36,7 @@
             if(isset($_SESSION['userId'])) {
             ?>
                 <li>
-                    <img class="" src="https://via.placeholder.com/30x30" alt="">
+                    <a href="?auth=profile"><img class="" src="https://via.placeholder.com/30x30" alt=""></a>
                 </li>
                 <li>
                     <a class="" href="?auth=profile"><?= htmlspecialchars($_SESSION['userUsername']); ?></a>

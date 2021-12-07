@@ -1,109 +1,333 @@
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
-<div>HOMEPAGE</div>
+<div class="main-content">
+    <section class="bg-2">
+        <div class="container">
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+            <div>HOMEPAGE</div>
+        </div>
+    </section>
+</div>

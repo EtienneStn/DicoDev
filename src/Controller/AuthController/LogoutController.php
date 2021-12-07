@@ -13,9 +13,10 @@ class LogoutController extends LogoutRepository{
     
     public function logout()
     {
+        ob_clean();
         $this->logoutRepository->logoutUser();
 
         header("Location: ?auth=successLogout");
-        exit();
+        die();
     }
 }

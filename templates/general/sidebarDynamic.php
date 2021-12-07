@@ -81,15 +81,17 @@ while ( $ligneResultat = $requeteFunctionSideBar -> fetch()) {
 $rien=array_shift($barNavFonctions);
 
 $i=0;
-	
+
+ob_start();
 ?>
 <main class="bg1">
-    <div class="sidebar row">
+    <div id="sidebar" class="sidebar row">
         <div class="general-sidebar">
             <div class="container-sidebar">
-                <form class="shearch-bar">
-                    <input type="text" name="shearch-bar" placeholder="Rechercher">
-                </form>
+            
+                <?php
+                include_once '../templates/general/searchBar.php'; 
+                ?>
                 <div class="items-sidebar">
                     <?php
                     foreach ($barNavLangages as $key1 => $value1)
@@ -154,3 +156,6 @@ $i=0;
             <button class="btn-sidebar"></button>
         </div>
     </div>
+<?php 
+    $output_sidebar = ob_get_clean();
+?>

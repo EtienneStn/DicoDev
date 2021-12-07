@@ -26,18 +26,20 @@ class LoginController extends ManagerController{
 
             if($this->emptyInputLogin($post) === false)
             {
-                header('Location: index.php?auth=profile&error=EmptyInput');
+                header('Location: index.php?auth=login&error=EmptyInput');
                 exit();
             }
             else 
             {
                 $this->loginRepository->loginUser($user);
-
-                header('Location: index.php?route=homepage');
+                if(isset($_SESSION['userId']))
+                {
+                    header('Location: index.php?route=homepage');
+                }
             }
         }
         
-        require '../templates/auth/login.php';
+        require_once '../templates/auth/login.php';
     }
 
     protected function emptyInputLogin($post)

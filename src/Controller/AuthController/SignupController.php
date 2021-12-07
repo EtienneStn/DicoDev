@@ -30,30 +30,34 @@ class SignupController extends ManagerController{
 
             if($this->signupRepository->emptyInputSignup($post) === false)
             {
-                header('Location: ./?auth=signup&error=EmptyInput');
-                exit();
+                var_dump("empty");
+                header('Location: ?auth=signup&error=EmptyInput');
+                die();
             }
             elseif($this->signupRepository->invalidUsername($post) === false)
             {
-                header('Location: ./?auth=signup&error=InvalidUsername');
-                exit();
+                header('Location: ?auth=signup&error=InvalidUsername');
+                die();
             }
             elseif($this->signupRepository->invalidEmail($post) === false)
             {
-                header('Location: ./?auth=signup&error=InvalidEmail');
-                exit();
+                header('Location: ?auth=signup&error=InvalidEmail');
+                die();
             }
             elseif($this->signupRepository->passwordMatch($post) === false)
             {
-                header('Location: ./?auth=signup&error=PasswordMatch');
-                exit();
+                header('Location: ?auth=signup&error=PasswordMatch');
+                die();
             }
             else {
                 $this->signupRepository->signupUser($user);
-                header('Location: ./?auth=login');
-                exit();
+                header('Location: ?auth=login');
+                die();
             }
         }
-        require '../templates/auth/signup.php';
+        else
+        {
+            require_once '../templates/auth/signup.php';
+        }
     }
 }

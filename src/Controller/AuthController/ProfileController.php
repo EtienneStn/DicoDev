@@ -38,6 +38,6 @@ class ProfileController extends ProfileRepository{
             exit();
             }
         }
-        require '../templates/auth/profile_form.php';
+        require_once '../templates/auth/profile_form.php';
     }
 }

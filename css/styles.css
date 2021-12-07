@@ -87,7 +87,7 @@ a{
 .container-fluid {
     width: 100%;
 }
-.container-signup {
+.container-auth {
     width: 60%;
     margin: 0 auto;
 }
@@ -274,8 +274,22 @@ a{
 .bg1{
     margin-top: 8vh;
 }
-.bg-no-margin{
+.bg-no-margin #slide{
     margin-top: 0;
+    height: 100%;
+    transition: 0.4s;
+    top: 0
+}
+#slide {
+    position: absolute;
+    left: -100px;
+    width: 100px;
+    height: 100px;
+    background: blue;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slide 0.5s forwards;
+    animation-delay: 2s;
 }
 .sidebar {
     position: fixed;
@@ -300,7 +314,7 @@ a{
     list-style: none;
     height: 100%;
 }
-.shearch-bar {
+.search-bar {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -309,7 +323,7 @@ a{
     padding: 5%;
     position: sticky;
 }
-.shearch-bar input{
+.search-bar input{
     width: 100%;
     text-align: center;
     border: var(--b1-border) solid 0.1rem;
@@ -319,7 +333,6 @@ a{
 }
 /* ITEMS SIDEBAR */
 .items-sidebar{
-    height: 95vh;
     overflow-x: hidden;
     overflow-y: scroll;
     width: 100%;
@@ -363,16 +376,6 @@ a{
     transition: 0.4s;
 }
 /* Bottom SIDEBAR */
-.sidebar-bottom {
-    height: 16%;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-.user-profile {
-    padding: 0 0.5rem 0 0.5rem;
-    align-items: center;
-    justify-content: space-between;
-}
 .sidebar-close {
     background-color: var(--bg4);
     flex-direction: column;
@@ -386,7 +389,7 @@ a{
     flex-direction: column;
     width: 7%;
     list-style: none;
-    height: 95vh;
+    height: 100vh;
 }
 .btn-sidebar{
     height: 100%;
@@ -403,13 +406,15 @@ a{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.bg2{
     background-color: var(--bg3);
 }
 .main-content-action{
     width: 100%;
     margin-left: 0%;
 }
-.general-main{
+.content-section{
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -421,7 +426,30 @@ a{
 .auth-form{
     display: flex;
     flex-direction: column;
-    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.auth-form .input-form{
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    margin: 1rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn-input{
+    border: none;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
 }
 /* FOOTER */
 .footer-content{

@@ -15,7 +15,7 @@ class SidebarController extends ManagerController
     }
 
     public function loadSidebar(){
-        require "../config/Variables.php";   
+        /* require_once "../config/Variables.php";   
         $requeteLangageSideBar = $this->sidebarRepository->getLangageSideBar();
         // $requeteLangageSideBar = $objet->fetchAll();
         // var_dump($requeteLangageSideBar);
@@ -28,21 +28,16 @@ class SidebarController extends ManagerController
         $requeteFunctionSideBar = $this->sidebarRepository->getFunctionSideBar();
         // $requeteFunctionSideBar = $objet->fetchAll();
         
-        $requeteJSON = $this->sidebarRepository->getJSON();
+        $requeteJSON = $this->sidebarRepository->getJSON(); */
         
-        /* require "../templates/general/sidebarDynamic.php"; */
-        require "../templates/general/sidebar.php";
+        /* require_once "../templates/general/sidebarDynamic.php"; */
+        require_once "../templates/general/sidebar.php";
         echo $output_sidebar;
-        // non require "../templates/header.php";
-        // require "../templates/body.php";
+        // non require_once "../templates/header.php";
+        // require_once "../templates/body.php";
         // echo "fichier - '".__FILE__ ."'  ligne - ". __LINE__ ."\n";
          
-        // require_once('../writeJSON.php');
+        
         // $mysqli->close();
     }
-    // public function single(){
-    //     $articles = $this->articleRepository->getArticle($_GET['id']);
-    //     $article = $articles->fetch();
-    //     require "../templates/single.php";
-    // }
 }

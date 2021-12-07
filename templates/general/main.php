@@ -3,13 +3,13 @@
 		<div class="rowContainer ">
 			<div class="col-2" id="navigation">
 			
-			<?php require ('../BarreDeRecherche.php') ?>
+			<?php require_once ('../BarreDeRecherche.php') ?>
 
-			<?php require ('../sideBar.php') ?>
+			<?php require_once ('../sideBar.php') ?>
 			</div>
 			
 			<div id="contenuBox" class="col-10 px-5">
-			<?php require ('../body.php') ?>
+			<?php require_once ('../body.php') ?>
 				
 			</div>
 		</div>
