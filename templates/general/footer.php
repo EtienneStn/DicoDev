@@ -1,4 +1,4 @@
-        </div>
+        </section>
     </main>
 </div>
 <footer class="bg-footer footer-content row">

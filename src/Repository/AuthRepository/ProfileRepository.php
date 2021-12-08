@@ -48,7 +48,7 @@ class ProfileRepository extends ManagerRepository
         }
     }
     
-    protected function emptyInputProfile($post)
+    public function emptyInputProfile($post)
     {
         if(empty($post['name']) || empty($post['surname']) || empty($post['username']) || empty($post['email']) || empty($post['password']))
         {

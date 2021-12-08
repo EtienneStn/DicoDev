@@ -4,10 +4,7 @@ namespace App\config;
 
 use App\src\Controller\ManagerController;
 use App\src\Controller\General\SidebarController;
-use App\src\Controller\AuthController\SignupController;
-use App\src\Controller\AuthController\LoginController;
-use App\src\Controller\AuthController\ProfileController;
-use App\src\Controller\AuthController\LogoutController;
+use App\src\Controller\AuthController\GeneralAuthController;
 
 
 class Router 
@@ -15,18 +12,13 @@ class Router
     
     private $managerController;
     private $sidebarController;
-    private $signupController;
-    private $loginController;
-    private $profileController;
+    private $generalAuthController;
     
     public function __construct()
     {
         $this->managerController = new ManagerController();
         $this->sidebarController = new SidebarController();
-        $this->signupController = new SignupController();
-        $this->loginController = new LoginController();
-        $this->profileController = new ProfileController();
-        $this->logoutController = new LogoutController();
+        $this->generalAuthController = new GeneralAuthController();
     }
 
     public function run()
@@ -58,28 +50,27 @@ class Router
                     }
                 }
 
-                $this->signupController->signupPage($_POST);
+                $this->generalAuthController->signupPage($_POST);
             }
             if($_GET['auth'] === "login")
             {
-                $this->loginController->loginPage($_POST);
+                $this->generalAuthController->loginPage($_POST);
             }
             if($_GET['auth'] === "profile")
             {
-                $this->managerController->profilePage();
+                $this->generalAuthController->profilePage();
             }
             if($_GET['auth'] === "profile/update")
             {
-                $this->profileController->profileUpdate($_POST);
+                $this->generalAuthController->profileUpdate($_POST);
             }
             if($_GET['auth'] === "logout")
             {
-                $this->logoutController->logout();
+                $this->generalAuthController->logout();
             }
             if($_GET['auth'] === "successLogout")
             {
                 $this->managerController->home();
-                echo "<div class='success'>Success Logout</div>";
             }
         }
         else 

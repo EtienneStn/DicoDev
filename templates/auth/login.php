@@ -1,5 +1,4 @@
-<section class="main-content bg-2">
-    <div class="container-auth">
+<div class="container-auth">
         <div class="h2">
             <h2>Login</h2>
         </div>
@@ -8,5 +7,4 @@
             <input class="input-form" type="password" name="password" placeholder="Password" id="">
             <input class="btn-input" type="submit" name="login" value="Login">
         </form>
-    </div>
-</section>
+</div>

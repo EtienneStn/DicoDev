@@ -54,4 +54,15 @@ class loginRepository extends ManagerRepository{
             }
         }
     }
+    public function emptyInputLogin($post)
+    {
+        if(empty($post['username'])|| empty($post['password']))
+        {
+            $result = false;
+        }
+        else {
+            $result = true;
+        }
+        return $result;
+    }
 }

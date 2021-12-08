@@ -44,7 +44,7 @@ dropdownArray.forEach(function(el){
 // SCROLL
 (function(){
 
-    let doc = document.querySelector('.main-content');
+    let doc = document.querySelector('body');
     let w = window;
   
     let prevScroll = w.scrollY || doc.scrollTop;
@@ -53,7 +53,8 @@ dropdownArray.forEach(function(el){
     let prevDirection = 0;
   
     let header = document.querySelector('.header');
-    let page = document.querySelector('.doc-page');
+    let sidebar = document.querySelector('.sidebar');
+    let mainContent = document.querySelector('.main-content')
   
     let checkScroll = function() {
 
@@ -78,12 +79,14 @@ dropdownArray.forEach(function(el){
       if (direction === 2 && curScroll > 58) { 
 
         header.classList.add('hide-header');
-        sidebar.classList.add('sidebar-no-margin');
+        mainContent.classList.add('main-content-scroll');
+        sidebar.classList.add('sidebar-action-scroll');
         prevDirection = direction;
       }
       else if (direction === 1) {
         header.classList.remove('hide-header');
-        sidebar.classList.remove('sidebar-no-margin');
+        mainContent.classList.remove('main-content-scroll');
+        sidebar.classList.remove('sidebar-action-scroll');
         prevDirection = direction;
       }
     };
