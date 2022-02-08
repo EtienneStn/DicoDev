@@ -1,94 +1,10 @@
 <?php
-// echo ("fichier - '".__FILE__ ."'  ligne - ". __LINE__ );
-//↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  * Barre de NAVIGATION * ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
-
-// Création tableau Langages 
-
-// $requeteLangageSideBar = "SELECT $tableLangageLogo, $tableLangageId, $tableLangageLangage FROM $tableLangage ";
-
-// $resultat = $mysqli -> query($requete);
-
-$barNavLangages = array();
-
-
-
-$i=0;
-
-// while ( $ligneResultat = $requeteLangageSideBar -> fetch_assoc()) {
-	$barNavLangages= (array)	$requeteLangageSideBar;
-	// var_dump($barNavLangages);
-	// echo ("fichier - '".__FILE__ ."'  ligne - ". __LINE__ );
-
-while ( $ligneResultat = $requeteLangageSideBar -> fetch()) {
-	$ligneResultat=((array)$ligneResultat);
-
-	$barNavLangages[$i]=  $ligneResultat; //toute la ligne dans format tableau";
-	// echo($barNavLangages[1]);
-	$i++;
-	
-	
-}
-$rien=array_shift($barNavLangages);
-// $rien=array_shift($barNavLangages);
-// var_dump($barNavLangages);
-// $barNavLangages=((array)$barNavLangages[1]); fonctionne
-// echo($barNavLangages["logo"]);
-
-// $barNavLangages=((array)$barNavLangages);
-// echo($barNavLangages["logo"]);
-
-
-// foreach ($barNavLangages as $key1 ) {
-// 	// var_dump( (array) $key1 );
-
-// }
-
-
-// $requete = "SELECT $tableProprieteId, $tableProprieteId_langage, $tableProprietePropriete FROM $tablePropriete ";
-
-// $resultat = $mysqli -> query($requete);
-
-$barNavPropriete = array();
-
-$i=0;
-
-while ( $ligneResultat = $requeteProprieteSideBar -> fetch()) {
-	$ligneResultat=((array)$ligneResultat);
-	 
-
-	$barNavPropriete[$i]=  $ligneResultat; //toute la ligne dans format tableau";
-
-	$i++;
-}
-$rien=array_shift($barNavPropriete);
-
-// $requete = "SELECT  $tableFonctionId_propriete, $tableFonctionFonction FROM $tableFonctions ";
-
-// $resultat = $mysqli -> query($requete);
-
-$barNavFonctions = array();
-
-$i=0;
-
-while ( $ligneResultat = $requeteFunctionSideBar -> fetch()) {
-	$ligneResultat=((array)$ligneResultat);
-	 
-
-	$barNavFonctions[$i]=  $ligneResultat; //toute la ligne dans format tableau";
-
-	$i++;
-}
-$rien=array_shift($barNavFonctions);
-
-$i=0;
-
 ob_start();
 ?>
-<main class="bg1">
+<div class="doc-page">
     <div id="sidebar" class="sidebar row">
         <div class="general-sidebar">
             <div class="container-sidebar">
-            
                 <?php
                 include_once '../templates/general/searchBar.php'; 
                 ?>
@@ -156,6 +72,8 @@ ob_start();
             <button class="btn-sidebar"></button>
         </div>
     </div>
+    <main class="bg1">
+        <section class="main-content bg-2">
 <?php 
     $output_sidebar = ob_get_clean();
 ?>

@@ -15,23 +15,9 @@ class SidebarController extends ManagerController
     }
 
     public function loadSidebar(){
-        /* require_once "../config/Variables.php";   
-        $requeteLangageSideBar = $this->sidebarRepository->getLangageSideBar();
-        // $requeteLangageSideBar = $objet->fetchAll();
-        // var_dump($requeteLangageSideBar);
-        // var_dump($article);
-
-
-        $requeteProprieteSideBar = $this->sidebarRepository->getProprieteSideBar();
-        // $requeteProprieteSideBar = $objet->fetchAll();
-
-        $requeteFunctionSideBar = $this->sidebarRepository->getFunctionSideBar();
-        // $requeteFunctionSideBar = $objet->fetchAll();
-        
-        $requeteJSON = $this->sidebarRepository->getJSON(); */
-        
-        /* require_once "../templates/general/sidebarDynamic.php"; */
+                
         require_once "../templates/general/sidebar.php";
+        // require_once "../templates/general/sidebar.php";
         echo $output_sidebar;
         // non require_once "../templates/header.php";
         // require_once "../templates/body.php";
